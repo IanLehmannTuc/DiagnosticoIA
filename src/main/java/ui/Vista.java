@@ -5,17 +5,23 @@
  */
 package ui;
 
+import com.github.cschen1205.ess.engine.RuleInferenceEngine;
+import java.awt.event.ItemEvent;
+import se.BaseDeConocimiento;
+import se.Hechos;
+
 /**
  *
  * @author Ian Lehmann
  */
-public class Vista extends javax.swing.JPanel {
+public class Vista extends javax.swing.JFrame {
 
     /**
      * Creates new form Vista
      */
     public Vista() {
         initComponents();
+        this.setTitle("Diagnostico Dengue/Covid-19");
     }
 
     /**
@@ -27,19 +33,816 @@ public class Vista extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        boxMuscular = new javax.swing.JCheckBox();
+        boxAbsominal = new javax.swing.JCheckBox();
+        boxOcular = new javax.swing.JCheckBox();
+        boxArticular = new javax.swing.JCheckBox();
+        boxGarganta = new javax.swing.JCheckBox();
+        boxPecho = new javax.swing.JCheckBox();
+        boxCabeza = new javax.swing.JCheckBox();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        boxEncias = new javax.swing.JCheckBox();
+        boxPiel = new javax.swing.JCheckBox();
+        boxNariz = new javax.swing.JCheckBox();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        boxDiarrea = new javax.swing.JCheckBox();
+        boxNauseas = new javax.swing.JCheckBox();
+        boxVomitos = new javax.swing.JCheckBox();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        boxDiffRespirar = new javax.swing.JCheckBox();
+        boxCongestionNasal = new javax.swing.JCheckBox();
+        boxTos = new javax.swing.JCheckBox();
+        boxPerdidaOlfato = new javax.swing.JCheckBox();
+        boxPerdidaGusto = new javax.swing.JCheckBox();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        boxZonaDengue = new javax.swing.JCheckBox();
+        boxContactoCovid = new javax.swing.JCheckBox();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        boxFiebre = new javax.swing.JCheckBox();
+        boxFatiga = new javax.swing.JCheckBox();
+        boxDebilidad = new javax.swing.JCheckBox();
+        boxEscalofrios = new javax.swing.JCheckBox();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        boxErupcionCutanea = new javax.swing.JCheckBox();
+        boxSarpullido = new javax.swing.JCheckBox();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        resultado_diagnostico = new javax.swing.JTextArea();
+        botDiagnosticar = new javax.swing.JButton();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel1.setText("Tipo de Dolores");
+
+        boxMuscular.setText("Muscular");
+        boxMuscular.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxMuscularItemStateChanged(evt);
+            }
+        });
+        boxMuscular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boxMuscularActionPerformed(evt);
+            }
+        });
+
+        boxAbsominal.setText("Abdominal");
+        boxAbsominal.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxAbsominalItemStateChanged(evt);
+            }
+        });
+
+        boxOcular.setText("Ocular");
+        boxOcular.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxOcularItemStateChanged(evt);
+            }
+        });
+
+        boxArticular.setText("Articular");
+        boxArticular.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxArticularItemStateChanged(evt);
+            }
+        });
+
+        boxGarganta.setText("Garganta");
+        boxGarganta.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxGargantaItemStateChanged(evt);
+            }
+        });
+
+        boxPecho.setText("Pecho");
+        boxPecho.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxPechoItemStateChanged(evt);
+            }
+        });
+
+        boxCabeza.setText("Cabeza");
+        boxCabeza.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxCabezaItemStateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxMuscular))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxAbsominal))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxOcular))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxArticular))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxGarganta))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxPecho))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxCabeza))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jLabel1)))
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxMuscular)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxAbsominal)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxOcular)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxArticular)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxGarganta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxPecho)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxCabeza)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel2.setText("Tipo de Sangrado");
+
+        boxEncias.setText("Encias");
+        boxEncias.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxEnciasItemStateChanged(evt);
+            }
+        });
+
+        boxPiel.setText("Piel");
+        boxPiel.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxPielItemStateChanged(evt);
+            }
+        });
+
+        boxNariz.setText("Nariz");
+        boxNariz.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxNarizItemStateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxEncias))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxPiel))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxNariz))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel2)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxEncias)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxPiel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxNariz)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel3.setText("Problemas Digestivos");
+
+        boxDiarrea.setText("Diarrea");
+        boxDiarrea.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxDiarreaItemStateChanged(evt);
+            }
+        });
+
+        boxNauseas.setText("Nauseas");
+        boxNauseas.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxNauseasItemStateChanged(evt);
+            }
+        });
+
+        boxVomitos.setText("Vomitos");
+        boxVomitos.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxVomitosItemStateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxDiarrea))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxNauseas))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxVomitos))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)))
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxDiarrea)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxNauseas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxVomitos)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel4.setText("Problemas Respiratorios");
+
+        boxDiffRespirar.setText("Dificultad para Respirar");
+        boxDiffRespirar.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxDiffRespirarItemStateChanged(evt);
+            }
+        });
+
+        boxCongestionNasal.setText("Congestion Nasal");
+        boxCongestionNasal.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxCongestionNasalItemStateChanged(evt);
+            }
+        });
+
+        boxTos.setText("Tos");
+        boxTos.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxTosItemStateChanged(evt);
+            }
+        });
+
+        boxPerdidaOlfato.setText("Perdida del Olfato");
+        boxPerdidaOlfato.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxPerdidaOlfatoItemStateChanged(evt);
+            }
+        });
+
+        boxPerdidaGusto.setText("Perdida de Gusto");
+        boxPerdidaGusto.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxPerdidaGustoItemStateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel4)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(boxDiffRespirar))
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(boxCongestionNasal))
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(boxTos))
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(boxPerdidaOlfato))
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(boxPerdidaGusto))))
+                .addContainerGap(33, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxDiffRespirar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxCongestionNasal)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxTos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxPerdidaOlfato)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxPerdidaGusto)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel5.setText("Zona de Riesgo");
+
+        boxZonaDengue.setText("Zona de Contagio de Dengue");
+        boxZonaDengue.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxZonaDengueItemStateChanged(evt);
+            }
+        });
+
+        boxContactoCovid.setText("Contacto estrecho con alguien con Covid-19");
+        boxContactoCovid.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxContactoCovidItemStateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxContactoCovid))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxZonaDengue))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(76, 76, 76)
+                        .addComponent(jLabel5)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxZonaDengue)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxContactoCovid)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel6.setText("Otros Sintomas");
+
+        boxFiebre.setText("Fiebre");
+        boxFiebre.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxFiebreItemStateChanged(evt);
+            }
+        });
+
+        boxFatiga.setText("Fatiga");
+        boxFatiga.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxFatigaItemStateChanged(evt);
+            }
+        });
+
+        boxDebilidad.setText("Debilidad Generalizada");
+        boxDebilidad.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxDebilidadItemStateChanged(evt);
+            }
+        });
+
+        boxEscalofrios.setText("Escalofrios");
+        boxEscalofrios.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxEscalofriosItemStateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addComponent(jLabel6))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxFiebre))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxFatiga))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxDebilidad))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxEscalofrios)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxFiebre)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxFatiga)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxDebilidad)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxEscalofrios)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel7.setText("Sintomas de Piel");
+
+        boxErupcionCutanea.setText("Erupcion cutanea");
+        boxErupcionCutanea.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxErupcionCutaneaItemStateChanged(evt);
+            }
+        });
+
+        boxSarpullido.setText("Sarpullido");
+        boxSarpullido.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                boxSarpullidoItemStateChanged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addComponent(jLabel7))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxErupcionCutanea))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(boxSarpullido)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxErupcionCutanea)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(boxSarpullido)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        resultado_diagnostico.setColumns(20);
+        resultado_diagnostico.setRows(5);
+        jScrollPane1.setViewportView(resultado_diagnostico);
+
+        botDiagnosticar.setText("Diagnosticar");
+        botDiagnosticar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botDiagnosticarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jScrollPane1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botDiagnosticar)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(18, 18, 18)
+                .addComponent(botDiagnosticar)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void boxMuscularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxMuscularActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boxMuscularActionPerformed
+
+    private void botDiagnosticarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botDiagnosticarActionPerformed
+        _rie.infer();
+        
+        boolean COVID = false;
+        boolean DENGUE = false;
+
+        if (_rie.getFactsAboutVariable(Hechos.COVID).size() > 0) {
+            COVID = true;
+        }
+        if (_rie.getFactsAboutVariable(Hechos.dengue).size() > 0) {
+            DENGUE = true;
+        }
+        
+        String diagnostico;
+        if (COVID || DENGUE) {
+            diagnostico = "Posible diagnostico: ";
+            if (COVID)
+                diagnostico += " COVID";
+           
+            if (DENGUE)
+                diagnostico += ", Dengue";
+        } else {
+            diagnostico = "No se pudo determinar el diagnostico.";
+        }
+        
+        resultado_diagnostico.setText(diagnostico);
+        
+        _rie.clearFacts();
+        
+        boxAbsominal.setSelected(false);
+        boxArticular.setSelected(false);
+        boxCabeza.setSelected(false);
+        boxCongestionNasal.setSelected(false);
+        boxContactoCovid.setSelected(false);
+        boxDebilidad.setSelected(false);
+        boxDiarrea.setSelected(false);
+        boxDiffRespirar.setSelected(false);
+        boxEncias.setSelected(false);
+        boxErupcionCutanea.setSelected(false);
+        boxEscalofrios.setSelected(false);
+        boxFatiga.setSelected(false);
+        boxFiebre.setSelected(false);
+        boxGarganta.setSelected(false);
+        boxMuscular.setSelected(false);
+        boxNariz.setSelected(false);
+        boxNauseas.setSelected(false);
+        boxOcular.setSelected(false);
+        boxPecho.setSelected(false);
+        boxPerdidaGusto.setSelected(false);
+        boxPerdidaOlfato.setSelected(false);
+        boxPiel.setSelected(false);
+        boxSarpullido.setSelected(false);
+        boxTos.setSelected(false);
+        boxVomitos.setSelected(false);
+        boxZonaDengue.setSelected(false);
+    }//GEN-LAST:event_botDiagnosticarActionPerformed
+
+    private void boxMuscularItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxMuscularItemStateChanged
+        setFact(Hechos.dolorMuscular, evt);
+    }//GEN-LAST:event_boxMuscularItemStateChanged
+
+    private void boxAbsominalItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxAbsominalItemStateChanged
+        setFact(Hechos.dolorAbdominal, evt);
+    }//GEN-LAST:event_boxAbsominalItemStateChanged
+
+    private void boxOcularItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxOcularItemStateChanged
+        setFact(Hechos.dolorOjos, evt);
+    }//GEN-LAST:event_boxOcularItemStateChanged
+
+    private void boxArticularItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxArticularItemStateChanged
+        setFact(Hechos.dolorArticular, evt);
+    }//GEN-LAST:event_boxArticularItemStateChanged
+
+    private void boxGargantaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxGargantaItemStateChanged
+        setFact(Hechos.dolorGarganta, evt);
+    }//GEN-LAST:event_boxGargantaItemStateChanged
+
+    private void boxPechoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxPechoItemStateChanged
+        setFact(Hechos.dolorPecho, evt);
+    }//GEN-LAST:event_boxPechoItemStateChanged
+
+    private void boxCabezaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxCabezaItemStateChanged
+        setFact(Hechos.dolorCabeza, evt);
+    }//GEN-LAST:event_boxCabezaItemStateChanged
+
+    private void boxEnciasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxEnciasItemStateChanged
+        setFact(Hechos.sangradoEncias, evt);
+    }//GEN-LAST:event_boxEnciasItemStateChanged
+
+    private void boxPielItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxPielItemStateChanged
+        setFact(Hechos.sangradoPiel, evt);
+    }//GEN-LAST:event_boxPielItemStateChanged
+
+    private void boxNarizItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxNarizItemStateChanged
+        setFact(Hechos.sangradoNariz, evt);
+    }//GEN-LAST:event_boxNarizItemStateChanged
+
+    private void boxDiarreaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxDiarreaItemStateChanged
+        setFact(Hechos.diarrea, evt);
+    }//GEN-LAST:event_boxDiarreaItemStateChanged
+
+    private void boxNauseasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxNauseasItemStateChanged
+        setFact(Hechos.nauseas, evt);
+    }//GEN-LAST:event_boxNauseasItemStateChanged
+
+    private void boxVomitosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxVomitosItemStateChanged
+        setFact(Hechos.vomito, evt);
+    }//GEN-LAST:event_boxVomitosItemStateChanged
+
+    private void boxDiffRespirarItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxDiffRespirarItemStateChanged
+        setFact(Hechos.dificultadRespirar, evt);
+    }//GEN-LAST:event_boxDiffRespirarItemStateChanged
+
+    private void boxCongestionNasalItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxCongestionNasalItemStateChanged
+        setFact(Hechos.congestionNasal, evt);
+    }//GEN-LAST:event_boxCongestionNasalItemStateChanged
+
+    private void boxTosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxTosItemStateChanged
+        setFact(Hechos.tos, evt);
+    }//GEN-LAST:event_boxTosItemStateChanged
+
+    private void boxPerdidaOlfatoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxPerdidaOlfatoItemStateChanged
+        setFact(Hechos.perdidaOlfato, evt);
+    }//GEN-LAST:event_boxPerdidaOlfatoItemStateChanged
+
+    private void boxPerdidaGustoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxPerdidaGustoItemStateChanged
+        setFact(Hechos.perdidaGusto, evt);
+    }//GEN-LAST:event_boxPerdidaGustoItemStateChanged
+
+    private void boxErupcionCutaneaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxErupcionCutaneaItemStateChanged
+        setFact(Hechos.erupcionCutanea, evt);
+    }//GEN-LAST:event_boxErupcionCutaneaItemStateChanged
+
+    private void boxSarpullidoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxSarpullidoItemStateChanged
+        setFact(Hechos.sarpullido, evt);
+    }//GEN-LAST:event_boxSarpullidoItemStateChanged
+
+    private void boxZonaDengueItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxZonaDengueItemStateChanged
+        setFact(Hechos.zonaRiesgo, evt);
+    }//GEN-LAST:event_boxZonaDengueItemStateChanged
+
+    private void boxContactoCovidItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxContactoCovidItemStateChanged
+        setFact(Hechos.contactoCOVID, evt);
+    }//GEN-LAST:event_boxContactoCovidItemStateChanged
+
+    private void boxFiebreItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxFiebreItemStateChanged
+        setFact(Hechos.fiebre, evt);
+    }//GEN-LAST:event_boxFiebreItemStateChanged
+
+    private void boxFatigaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxFatigaItemStateChanged
+        setFact(Hechos.fatiga, evt);
+    }//GEN-LAST:event_boxFatigaItemStateChanged
+
+    private void boxDebilidadItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxDebilidadItemStateChanged
+        setFact(Hechos.debilidadGeneralziada, evt);
+    }//GEN-LAST:event_boxDebilidadItemStateChanged
+
+    private void boxEscalofriosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxEscalofriosItemStateChanged
+        setFact(Hechos.escalofrios, evt);
+    }//GEN-LAST:event_boxEscalofriosItemStateChanged
+
+    private void setFact(String hecho, ItemEvent evt) {
+        Object item = evt.getItem();
+
+        if (evt.getStateChange() == ItemEvent.SELECTED) {
+            if (!"none".equals(item.toString().toLowerCase()))
+                this._rie.addFact(hecho, item.toString().toLowerCase());
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botDiagnosticar;
+    private javax.swing.JCheckBox boxAbsominal;
+    private javax.swing.JCheckBox boxArticular;
+    private javax.swing.JCheckBox boxCabeza;
+    private javax.swing.JCheckBox boxCongestionNasal;
+    private javax.swing.JCheckBox boxContactoCovid;
+    private javax.swing.JCheckBox boxDebilidad;
+    private javax.swing.JCheckBox boxDiarrea;
+    private javax.swing.JCheckBox boxDiffRespirar;
+    private javax.swing.JCheckBox boxEncias;
+    private javax.swing.JCheckBox boxErupcionCutanea;
+    private javax.swing.JCheckBox boxEscalofrios;
+    private javax.swing.JCheckBox boxFatiga;
+    private javax.swing.JCheckBox boxFiebre;
+    private javax.swing.JCheckBox boxGarganta;
+    private javax.swing.JCheckBox boxMuscular;
+    private javax.swing.JCheckBox boxNariz;
+    private javax.swing.JCheckBox boxNauseas;
+    private javax.swing.JCheckBox boxOcular;
+    private javax.swing.JCheckBox boxPecho;
+    private javax.swing.JCheckBox boxPerdidaGusto;
+    private javax.swing.JCheckBox boxPerdidaOlfato;
+    private javax.swing.JCheckBox boxPiel;
+    private javax.swing.JCheckBox boxSarpullido;
+    private javax.swing.JCheckBox boxTos;
+    private javax.swing.JCheckBox boxVomitos;
+    private javax.swing.JCheckBox boxZonaDengue;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea resultado_diagnostico;
     // End of variables declaration//GEN-END:variables
+
+    private RuleInferenceEngine _rie = BaseDeConocimiento.getRules(true);
 }
