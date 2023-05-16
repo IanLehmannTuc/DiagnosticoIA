@@ -688,6 +688,7 @@ public class Vista extends javax.swing.JFrame {
 
     }//GEN-LAST:event_botDiagnosticarActionPerformed
 
+    //TODO: Cambiar el evento a click en ves de ItemStateChanged
     private void boxMuscularItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxMuscularItemStateChanged
         setFact(Hechos.dolorMuscular, evt);
     }//GEN-LAST:event_boxMuscularItemStateChanged
