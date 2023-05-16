@@ -2,11 +2,7 @@ package se;
 
 import com.github.cschen1205.ess.engine.EqualsClause;
 
-import javax.management.openmbean.CompositeDataView;
-
-import com.github.cschen1205.ess.engine.Clause;
 import com.github.cschen1205.ess.engine.KieRuleInferenceEngine;
-import com.github.cschen1205.ess.engine.NegationClause;
 import com.github.cschen1205.ess.engine.Rule;
 import com.github.cschen1205.ess.engine.RuleInferenceEngine;
 
@@ -47,15 +43,27 @@ public class BaseDeConocimiento {
         rule.setConsequent(new EqualsClause(Hechos.dengue, "si"));
         rie.addRule(rule);
         
-        rule = new Rule("DENGUE_Regla_3");
+        rule = new Rule("DENGUE_Regla_3a");
         rule.addAntecedent(new EqualsClause(Hechos.nauseas, "si"));
         rule.addAntecedent(new EqualsClause(Hechos.vomito, "si"));
         rule.addAntecedent(new EqualsClause(Hechos.dolorAbdominal, "si"));
-        rule.addAntecedent(new OrClause(
-                new EqualsClause(Hechos.sangradoEncias, "si"),
-                new EqualsClause(Hechos.sangradoNariz, "si"),
-                new EqualsClause(Hechos.sangradoPiel, "si")
-        ));
+        rule.addAntecedent(new EqualsClause(Hechos.sangradoEncias, "si"));
+        rule.setConsequent(new EqualsClause(Hechos.dengue, "si"));
+        rie.addRule(rule);
+
+        rule = new Rule("DENGUE_Regla_3b");
+        rule.addAntecedent(new EqualsClause(Hechos.nauseas, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.vomito, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.dolorAbdominal, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.sangradoNariz, "si"));
+        rule.setConsequent(new EqualsClause(Hechos.dengue, "si"));
+        rie.addRule(rule);
+
+        rule = new Rule("DENGUE_Regla_3c");
+        rule.addAntecedent(new EqualsClause(Hechos.nauseas, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.vomito, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.dolorAbdominal, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.sangradoPiel, "si"));
         rule.setConsequent(new EqualsClause(Hechos.dengue, "si"));
         rie.addRule(rule);
         
@@ -105,14 +113,19 @@ public class BaseDeConocimiento {
         rule.setConsequent(new EqualsClause(Hechos.dengue, "si"));
         rie.addRule(rule);
         
-        rule = new Rule("DENGUE_Regla_10");
+        rule = new Rule("DENGUE_Regla_10a");
         rule.addAntecedent(new EqualsClause(Hechos.dolorMuscular, "si"));
         rule.addAntecedent(new EqualsClause(Hechos.dolorArticular, "si"));
         rule.addAntecedent(new EqualsClause(Hechos.fatiga, "si"));
-        rule.addAntecedent(new OrClause(
-                new EqualsClause(Hechos.sangradoEncias, "si"),
-                new EqualsClause(Hechos.sangradoNariz, "si")
-        ));
+        rule.addAntecedent(new EqualsClause(Hechos.sangradoEncias, "si"));
+        rule.setConsequent(new EqualsClause(Hechos.dengue, "si"));
+        rie.addRule(rule);
+
+        rule = new Rule("DENGUE_Regla_10b");
+        rule.addAntecedent(new EqualsClause(Hechos.dolorMuscular, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.dolorArticular, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.fatiga, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.sangradoNariz, "si"));
         rule.setConsequent(new EqualsClause(Hechos.dengue, "si"));
         rie.addRule(rule);
         
@@ -169,13 +182,17 @@ public class BaseDeConocimiento {
         rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
         rie.addRule(rule);
 
-        rule = new Rule("COVID_Regla_2");
+        rule = new Rule("COVID_Regla_2a");
         rule.addAntecedent(new EqualsClause(Hechos.fiebre, "si"));
         rule.addAntecedent(new EqualsClause(Hechos.dolorGarganta, "si"));
-        rule.addAntecedent(new OrClause(
-                new EqualsClause(Hechos.perdidaOlfato, "si"),
-                new EqualsClause(Hechos.perdidaGusto, "si")
-        ));
+        rule.addAntecedent(new EqualsClause(Hechos.perdidaOlfato, "si"));
+        rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
+        rie.addRule(rule);
+
+        rule = new Rule("COVID_Regla_2b");
+        rule.addAntecedent(new EqualsClause(Hechos.fiebre, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.dolorGarganta, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.perdidaGusto, "si"));
         rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
         rie.addRule(rule);
 
@@ -194,14 +211,19 @@ public class BaseDeConocimiento {
         rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
         rie.addRule(rule);
         
-        rule = new Rule("COVID_Regla_5");
+        rule = new Rule("COVID_Regla_5a");
         rule.addAntecedent(new EqualsClause(Hechos.fiebre, "si"));
         rule.addAntecedent(new EqualsClause(Hechos.escalofrios, "si"));
         rule.addAntecedent(new EqualsClause(Hechos.dolorGarganta, "si"));
-        rule.addAntecedent(new OrClause(
-                new EqualsClause(Hechos.perdidaOlfato, "si"),
-                new EqualsClause(Hechos.perdidaGusto, "si")
-        ));
+        rule.addAntecedent(new EqualsClause(Hechos.perdidaOlfato, "si"));
+        rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
+        rie.addRule(rule);
+
+        rule = new Rule("COVID_Regla_5b");
+        rule.addAntecedent(new EqualsClause(Hechos.fiebre, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.escalofrios, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.dolorGarganta, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.perdidaGusto, "si"));
         rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
         rie.addRule(rule);
         
@@ -221,14 +243,19 @@ public class BaseDeConocimiento {
         rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
         rie.addRule(rule);
         
-        rule = new Rule("COVID_Regla_8");
+        rule = new Rule("COVID_Regla_8a");
         rule.addAntecedent(new EqualsClause(Hechos.fiebre, "si"));
         rule.addAntecedent(new EqualsClause(Hechos.tos, "si"));
         rule.addAntecedent(new EqualsClause(Hechos.dificultadRespirar, "si"));
-        rule.addAntecedent(new OrClause(
-                new EqualsClause(Hechos.perdidaOlfato, "si"),
-                new EqualsClause(Hechos.perdidaGusto, "si")
-        ));
+        rule.addAntecedent(new EqualsClause(Hechos.perdidaOlfato, "si"));
+        rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
+        rie.addRule(rule);
+
+        rule = new Rule("COVID_Regla_8b");
+        rule.addAntecedent(new EqualsClause(Hechos.fiebre, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.tos, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.dificultadRespirar, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.perdidaGusto, "si"));
         rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
         rie.addRule(rule);
         
@@ -256,14 +283,19 @@ public class BaseDeConocimiento {
         rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
         rie.addRule(rule);
         
-        rule = new Rule("COVID_Regla_12");
+        rule = new Rule("COVID_Regla_12a");
         rule.addAntecedent(new EqualsClause(Hechos.fiebre, "si"));
         rule.addAntecedent(new EqualsClause(Hechos.dolorGarganta, "si"));
         rule.addAntecedent(new EqualsClause(Hechos.diarrea, "si"));
-        rule.addAntecedent(new OrClause(
-                new EqualsClause(Hechos.perdidaOlfato, "si"),
-                new EqualsClause(Hechos.perdidaGusto, "si")
-        ));
+        rule.addAntecedent(new EqualsClause(Hechos.perdidaOlfato, "si"));
+        rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
+        rie.addRule(rule);
+
+        rule = new Rule("COVID_Regla_12b");
+        rule.addAntecedent(new EqualsClause(Hechos.fiebre, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.dolorGarganta, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.diarrea, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.perdidaGusto, "si"));
         rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
         rie.addRule(rule);
 
@@ -275,14 +307,19 @@ public class BaseDeConocimiento {
         rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
         rie.addRule(rule);
 
-        rule = new Rule("COVID_Regla_14");
+        rule = new Rule("COVID_Regla_14a");
         rule.addAntecedent(new EqualsClause(Hechos.contactoCOVID, "si"));
         rule.addAntecedent(new EqualsClause(Hechos.fatiga, "si"));
         rule.addAntecedent(new EqualsClause(Hechos.dolorGarganta, "si"));
-        rule.addAntecedent(new OrClause(
-                new EqualsClause(Hechos.perdidaOlfato, "si"),
-                new EqualsClause(Hechos.perdidaGusto, "si")
-        ));
+        rule.addAntecedent(new EqualsClause(Hechos.perdidaOlfato, "si"));
+        rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
+        rie.addRule(rule);
+
+        rule = new Rule("COVID_Regla_14b");
+        rule.addAntecedent(new EqualsClause(Hechos.contactoCOVID, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.fatiga, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.dolorGarganta, "si"));
+        rule.addAntecedent(new EqualsClause(Hechos.perdidaGusto, "si"));
         rule.setConsequent(new EqualsClause(Hechos.COVID, "si"));
         rie.addRule(rule);
         
