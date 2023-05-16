@@ -104,6 +104,10 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="boxMuscular" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -125,15 +129,10 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="boxPecho" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="boxCabeza" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="boxCabeza" min="-2" max="-2" attributes="0"/>
+                              <Component id="boxPecho" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <EmptySpace pref="23" max="32767" attributes="0"/>
@@ -145,21 +144,21 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                   <Component id="boxMuscular" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                   <Component id="boxAbsominal" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                   <Component id="boxOcular" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                   <Component id="boxArticular" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="boxGarganta" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="boxPecho" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace pref="3" max="32767" attributes="0"/>
                   <Component id="boxCabeza" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -174,57 +173,41 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Muscular"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxMuscularItemStateChanged"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="boxMuscularActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxAbsominal">
           <Properties>
             <Property name="text" type="java.lang.String" value="Abdominal"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxAbsominalItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxOcular">
           <Properties>
             <Property name="text" type="java.lang.String" value="Ocular"/>
           </Properties>
           <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxOcularItemStateChanged"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boxOcularMouseClicked"/>
           </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxArticular">
           <Properties>
             <Property name="text" type="java.lang.String" value="Articular"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxArticularItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxGarganta">
           <Properties>
             <Property name="text" type="java.lang.String" value="Garganta"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxGargantaItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxPecho">
           <Properties>
             <Property name="text" type="java.lang.String" value="Pecho"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxPechoItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxCabeza">
           <Properties>
             <Property name="text" type="java.lang.String" value="Cabeza"/>
           </Properties>
           <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxCabezaItemStateChanged"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boxCabezaMouseClicked"/>
           </Events>
         </Component>
       </SubComponents>
@@ -244,6 +227,10 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="boxEncias" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -254,10 +241,6 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="boxNariz" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -271,11 +254,11 @@
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="boxEncias" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                   <Component id="boxPiel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace pref="3" max="32767" attributes="0"/>
                   <Component id="boxNariz" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -290,25 +273,16 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Encias"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxEnciasItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxPiel">
           <Properties>
             <Property name="text" type="java.lang.String" value="Piel"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxPielItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxNariz">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nariz"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxNarizItemStateChanged"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -326,7 +300,11 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="boxDiarrea" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -338,10 +316,6 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="boxVomitos" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      </Group>
                   </Group>
                   <EmptySpace pref="17" max="32767" attributes="0"/>
               </Group>
@@ -352,13 +326,13 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                   <Component id="boxDiarrea" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                   <Component id="boxNauseas" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace pref="3" max="32767" attributes="0"/>
                   <Component id="boxVomitos" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -373,25 +347,16 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Diarrea"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxDiarreaItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxNauseas">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nauseas"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxNauseasItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxVomitos">
           <Properties>
             <Property name="text" type="java.lang.String" value="Vomitos"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxVomitosItemStateChanged"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -407,31 +372,18 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="boxDiffRespirar" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="boxCongestionNasal" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="boxTos" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="boxPerdidaOlfato" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="boxPerdidaGusto" min="-2" max="-2" attributes="0"/>
-                          </Group>
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="boxDiffRespirar" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="boxCongestionNasal" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="boxTos" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="boxPerdidaOlfato" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="boxPerdidaGusto" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="33" max="32767" attributes="0"/>
               </Group>
@@ -442,13 +394,13 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                   <Component id="boxDiffRespirar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="boxCongestionNasal" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="boxTos" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                   <Component id="boxPerdidaOlfato" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="boxPerdidaGusto" min="-2" max="-2" attributes="0"/>
@@ -465,43 +417,28 @@
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxDiffRespirar">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Dificultad para Respirar"/>
+            <Property name="text" type="java.lang.String" value="Dificultad para respirar"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxDiffRespirarItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxCongestionNasal">
           <Properties>
             <Property name="text" type="java.lang.String" value="Congestion Nasal"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxCongestionNasalItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxTos">
           <Properties>
             <Property name="text" type="java.lang.String" value="Tos"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxTosItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxPerdidaOlfato">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Perdida del Olfato"/>
+            <Property name="text" type="java.lang.String" value="Perdida de Olfato"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxPerdidaOlfatoItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxPerdidaGusto">
           <Properties>
             <Property name="text" type="java.lang.String" value="Perdida de Gusto"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxPerdidaGustoItemStateChanged"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -520,16 +457,16 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="boxContactoCovid" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="boxZonaDengue" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="boxContactoCovid" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -543,9 +480,9 @@
                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="boxZonaDengue" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace pref="3" max="32767" attributes="0"/>
                   <Component id="boxContactoCovid" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -560,17 +497,11 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Zona de Contagio de Dengue"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxZonaDengueItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxContactoCovid">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Contacto estrecho con alguien con Covid-19"/>
+            <Property name="text" type="java.lang.String" value="Contacto Estrecho con Alguien con COVID-19"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxContactoCovidItemStateChanged"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -618,15 +549,15 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                   <Component id="boxFiebre" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                   <Component id="boxFatiga" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                   <Component id="boxDebilidad" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace pref="3" max="32767" attributes="0"/>
                   <Component id="boxEscalofrios" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -642,32 +573,23 @@
             <Property name="text" type="java.lang.String" value="Fiebre"/>
           </Properties>
           <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxFiebreItemStateChanged"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boxFiebreMouseClicked"/>
           </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxFatiga">
           <Properties>
             <Property name="text" type="java.lang.String" value="Fatiga"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxFatigaItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxDebilidad">
           <Properties>
             <Property name="text" type="java.lang.String" value="Debilidad Generalizada"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxDebilidadItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxEscalofrios">
           <Properties>
             <Property name="text" type="java.lang.String" value="Escalofrios"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxEscalofriosItemStateChanged"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -707,11 +629,11 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                   <Component id="boxErupcionCutanea" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace pref="3" max="32767" attributes="0"/>
                   <Component id="boxSarpullido" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -724,19 +646,13 @@
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxErupcionCutanea">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Erupcion cutanea"/>
+            <Property name="text" type="java.lang.String" value="Erupcion Cutanea"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxErupcionCutaneaItemStateChanged"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JCheckBox" name="boxSarpullido">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sarpullido"/>
           </Properties>
-          <Events>
-            <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="boxSarpullidoItemStateChanged"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>

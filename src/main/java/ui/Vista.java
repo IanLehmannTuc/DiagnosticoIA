@@ -86,56 +86,26 @@ public class Vista extends javax.swing.JFrame {
         jLabel1.setText("Tipo de Dolores");
 
         boxMuscular.setText("Muscular");
-        boxMuscular.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxMuscularItemStateChanged(evt);
-            }
-        });
-        boxMuscular.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boxMuscularActionPerformed(evt);
-            }
-        });
 
         boxAbsominal.setText("Abdominal");
-        boxAbsominal.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxAbsominalItemStateChanged(evt);
-            }
-        });
 
         boxOcular.setText("Ocular");
-        boxOcular.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxOcularItemStateChanged(evt);
+        boxOcular.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boxOcularMouseClicked(evt);
             }
         });
 
         boxArticular.setText("Articular");
-        boxArticular.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxArticularItemStateChanged(evt);
-            }
-        });
 
         boxGarganta.setText("Garganta");
-        boxGarganta.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxGargantaItemStateChanged(evt);
-            }
-        });
 
         boxPecho.setText("Pecho");
-        boxPecho.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxPechoItemStateChanged(evt);
-            }
-        });
 
         boxCabeza.setText("Cabeza");
-        boxCabeza.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxCabezaItemStateChanged(evt);
+        boxCabeza.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boxCabezaMouseClicked(evt);
             }
         });
 
@@ -145,6 +115,9 @@ public class Vista extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(boxMuscular))
@@ -162,13 +135,9 @@ public class Vista extends javax.swing.JFrame {
                         .addComponent(boxGarganta))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(boxPecho))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(boxCabeza))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(jLabel1)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(boxCabeza)
+                            .addComponent(boxPecho))))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -176,21 +145,21 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(7, 7, 7)
                 .addComponent(boxMuscular)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(3, 3, 3)
                 .addComponent(boxAbsominal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(3, 3, 3)
                 .addComponent(boxOcular)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(3, 3, 3)
                 .addComponent(boxArticular)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(boxGarganta)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(boxPecho)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 3, Short.MAX_VALUE)
                 .addComponent(boxCabeza)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -198,25 +167,10 @@ public class Vista extends javax.swing.JFrame {
         jLabel2.setText("Tipo de Sangrado");
 
         boxEncias.setText("Encias");
-        boxEncias.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxEnciasItemStateChanged(evt);
-            }
-        });
 
         boxPiel.setText("Piel");
-        boxPiel.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxPielItemStateChanged(evt);
-            }
-        });
 
         boxNariz.setText("Nariz");
-        boxNariz.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxNarizItemStateChanged(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -225,6 +179,9 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(boxEncias))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -232,10 +189,7 @@ public class Vista extends javax.swing.JFrame {
                         .addComponent(boxPiel))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(boxNariz))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel2)))
+                        .addComponent(boxNariz)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -245,11 +199,11 @@ public class Vista extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(boxEncias)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(3, 3, 3)
                 .addComponent(boxPiel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 3, Short.MAX_VALUE)
                 .addComponent(boxNariz)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -257,25 +211,10 @@ public class Vista extends javax.swing.JFrame {
         jLabel3.setText("Problemas Digestivos");
 
         boxDiarrea.setText("Diarrea");
-        boxDiarrea.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxDiarreaItemStateChanged(evt);
-            }
-        });
 
         boxNauseas.setText("Nauseas");
-        boxNauseas.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxNauseasItemStateChanged(evt);
-            }
-        });
 
         boxVomitos.setText("Vomitos");
-        boxVomitos.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxVomitosItemStateChanged(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -284,6 +223,9 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(boxDiarrea))
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -291,10 +233,7 @@ public class Vista extends javax.swing.JFrame {
                         .addComponent(boxNauseas))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(boxVomitos))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel3)))
+                        .addComponent(boxVomitos)))
                 .addContainerGap(17, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -302,77 +241,44 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(7, 7, 7)
                 .addComponent(boxDiarrea)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(3, 3, 3)
                 .addComponent(boxNauseas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 3, Short.MAX_VALUE)
                 .addComponent(boxVomitos)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel4.setText("Problemas Respiratorios");
 
-        boxDiffRespirar.setText("Dificultad para Respirar");
-        boxDiffRespirar.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxDiffRespirarItemStateChanged(evt);
-            }
-        });
+        boxDiffRespirar.setText("Dificultad para respirar");
 
         boxCongestionNasal.setText("Congestion Nasal");
-        boxCongestionNasal.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxCongestionNasalItemStateChanged(evt);
-            }
-        });
 
         boxTos.setText("Tos");
-        boxTos.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxTosItemStateChanged(evt);
-            }
-        });
 
-        boxPerdidaOlfato.setText("Perdida del Olfato");
-        boxPerdidaOlfato.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxPerdidaOlfatoItemStateChanged(evt);
-            }
-        });
+        boxPerdidaOlfato.setText("Perdida de Olfato");
 
         boxPerdidaGusto.setText("Perdida de Gusto");
-        boxPerdidaGusto.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxPerdidaGustoItemStateChanged(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(boxDiffRespirar))
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(boxCongestionNasal))
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(boxTos))
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(boxPerdidaOlfato))
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(boxPerdidaGusto))))
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel4))
+                    .addComponent(boxDiffRespirar)
+                    .addComponent(boxCongestionNasal)
+                    .addComponent(boxTos)
+                    .addComponent(boxPerdidaOlfato)
+                    .addComponent(boxPerdidaGusto))
                 .addContainerGap(33, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -380,13 +286,13 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(7, 7, 7)
                 .addComponent(boxDiffRespirar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(boxCongestionNasal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(boxTos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(3, 3, 3)
                 .addComponent(boxPerdidaOlfato)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(boxPerdidaGusto)
@@ -398,18 +304,8 @@ public class Vista extends javax.swing.JFrame {
         jLabel5.setText("Zona de Riesgo");
 
         boxZonaDengue.setText("Zona de Contagio de Dengue");
-        boxZonaDengue.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxZonaDengueItemStateChanged(evt);
-            }
-        });
 
-        boxContactoCovid.setText("Contacto estrecho con alguien con Covid-19");
-        boxContactoCovid.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxContactoCovidItemStateChanged(evt);
-            }
-        });
+        boxContactoCovid.setText("Contacto Estrecho con Alguien con COVID-19");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -418,14 +314,14 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(boxContactoCovid))
+                        .addGap(76, 76, 76)
+                        .addComponent(jLabel5))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(boxZonaDengue))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addComponent(jLabel5)))
+                        .addContainerGap()
+                        .addComponent(boxContactoCovid)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -435,9 +331,9 @@ public class Vista extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(boxZonaDengue)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 3, Short.MAX_VALUE)
                 .addComponent(boxContactoCovid)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -445,32 +341,17 @@ public class Vista extends javax.swing.JFrame {
         jLabel6.setText("Otros Sintomas");
 
         boxFiebre.setText("Fiebre");
-        boxFiebre.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxFiebreItemStateChanged(evt);
+        boxFiebre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                boxFiebreMouseClicked(evt);
             }
         });
 
         boxFatiga.setText("Fatiga");
-        boxFatiga.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxFatigaItemStateChanged(evt);
-            }
-        });
 
         boxDebilidad.setText("Debilidad Generalizada");
-        boxDebilidad.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxDebilidadItemStateChanged(evt);
-            }
-        });
 
         boxEscalofrios.setText("Escalofrios");
-        boxEscalofrios.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxEscalofriosItemStateChanged(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -500,34 +381,24 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(7, 7, 7)
                 .addComponent(boxFiebre)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(3, 3, 3)
                 .addComponent(boxFatiga)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(3, 3, 3)
                 .addComponent(boxDebilidad)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 3, Short.MAX_VALUE)
                 .addComponent(boxEscalofrios)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel7.setText("Sintomas de Piel");
 
-        boxErupcionCutanea.setText("Erupcion cutanea");
-        boxErupcionCutanea.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxErupcionCutaneaItemStateChanged(evt);
-            }
-        });
+        boxErupcionCutanea.setText("Erupcion Cutanea");
 
         boxSarpullido.setText("Sarpullido");
-        boxSarpullido.addItemListener(new java.awt.event.ItemListener() {
-            public void itemStateChanged(java.awt.event.ItemEvent evt) {
-                boxSarpullidoItemStateChanged(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -551,11 +422,11 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(7, 7, 7)
                 .addComponent(boxErupcionCutanea)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 3, Short.MAX_VALUE)
                 .addComponent(boxSarpullido)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         resultado_diagnostico.setColumns(20);
@@ -626,10 +497,6 @@ public class Vista extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void boxMuscularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxMuscularActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_boxMuscularActionPerformed
-
     private void botDiagnosticarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botDiagnosticarActionPerformed
         _rie.infer();
         
@@ -688,119 +555,24 @@ public class Vista extends javax.swing.JFrame {
 
     }//GEN-LAST:event_botDiagnosticarActionPerformed
 
-    //TODO: Cambiar el evento a click en ves de ItemStateChanged
-    private void boxMuscularItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxMuscularItemStateChanged
-        setFact(Hechos.dolorMuscular, evt);
-    }//GEN-LAST:event_boxMuscularItemStateChanged
+    private void boxOcularMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boxOcularMouseClicked
+        setFact(Hechos.dolorOjos, this.boxOcular.isSelected());
+    }//GEN-LAST:event_boxOcularMouseClicked
 
-    private void boxAbsominalItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxAbsominalItemStateChanged
-        setFact(Hechos.dolorAbdominal, evt);
-    }//GEN-LAST:event_boxAbsominalItemStateChanged
+    private void boxCabezaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boxCabezaMouseClicked
+        setFact(Hechos.dolorCabeza, this.boxCabeza.isSelected());
+    }//GEN-LAST:event_boxCabezaMouseClicked
 
-    private void boxOcularItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxOcularItemStateChanged
-        setFact(Hechos.dolorOjos, evt);
-    }//GEN-LAST:event_boxOcularItemStateChanged
+    private void boxFiebreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boxFiebreMouseClicked
+        setFact(Hechos.fiebre, this.boxFiebre.isSelected());
+    }//GEN-LAST:event_boxFiebreMouseClicked
 
-    private void boxArticularItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxArticularItemStateChanged
-        setFact(Hechos.dolorArticular, evt);
-    }//GEN-LAST:event_boxArticularItemStateChanged
+    //TODO: Cambiar el evento a click en ves de ItemStateChange
 
-    private void boxGargantaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxGargantaItemStateChanged
-        setFact(Hechos.dolorGarganta, evt);
-    }//GEN-LAST:event_boxGargantaItemStateChanged
+    private void setFact(String hecho, Boolean selected) {
+        String cumple = (selected)? "si": "no";
 
-    private void boxPechoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxPechoItemStateChanged
-        setFact(Hechos.dolorPecho, evt);
-    }//GEN-LAST:event_boxPechoItemStateChanged
-
-    private void boxCabezaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxCabezaItemStateChanged
-        setFact(Hechos.dolorCabeza, evt);
-    }//GEN-LAST:event_boxCabezaItemStateChanged
-
-    private void boxEnciasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxEnciasItemStateChanged
-        setFact(Hechos.sangradoEncias, evt);
-    }//GEN-LAST:event_boxEnciasItemStateChanged
-
-    private void boxPielItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxPielItemStateChanged
-        setFact(Hechos.sangradoPiel, evt);
-    }//GEN-LAST:event_boxPielItemStateChanged
-
-    private void boxNarizItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxNarizItemStateChanged
-        setFact(Hechos.sangradoNariz, evt);
-    }//GEN-LAST:event_boxNarizItemStateChanged
-
-    private void boxDiarreaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxDiarreaItemStateChanged
-        setFact(Hechos.diarrea, evt);
-    }//GEN-LAST:event_boxDiarreaItemStateChanged
-
-    private void boxNauseasItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxNauseasItemStateChanged
-        setFact(Hechos.nauseas, evt);
-    }//GEN-LAST:event_boxNauseasItemStateChanged
-
-    private void boxVomitosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxVomitosItemStateChanged
-        setFact(Hechos.vomito, evt);
-    }//GEN-LAST:event_boxVomitosItemStateChanged
-
-    private void boxDiffRespirarItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxDiffRespirarItemStateChanged
-        setFact(Hechos.dificultadRespirar, evt);
-    }//GEN-LAST:event_boxDiffRespirarItemStateChanged
-
-    private void boxCongestionNasalItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxCongestionNasalItemStateChanged
-        setFact(Hechos.congestionNasal, evt);
-    }//GEN-LAST:event_boxCongestionNasalItemStateChanged
-
-    private void boxTosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxTosItemStateChanged
-        setFact(Hechos.tos, evt);
-    }//GEN-LAST:event_boxTosItemStateChanged
-
-    private void boxPerdidaOlfatoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxPerdidaOlfatoItemStateChanged
-        setFact(Hechos.perdidaOlfato, evt);
-    }//GEN-LAST:event_boxPerdidaOlfatoItemStateChanged
-
-    private void boxPerdidaGustoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxPerdidaGustoItemStateChanged
-        setFact(Hechos.perdidaGusto, evt);
-    }//GEN-LAST:event_boxPerdidaGustoItemStateChanged
-
-    private void boxErupcionCutaneaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxErupcionCutaneaItemStateChanged
-        setFact(Hechos.erupcionCutanea, evt);
-    }//GEN-LAST:event_boxErupcionCutaneaItemStateChanged
-
-    private void boxSarpullidoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxSarpullidoItemStateChanged
-        setFact(Hechos.sarpullido, evt);
-    }//GEN-LAST:event_boxSarpullidoItemStateChanged
-
-    private void boxZonaDengueItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxZonaDengueItemStateChanged
-        setFact(Hechos.zonaRiesgo, evt);
-    }//GEN-LAST:event_boxZonaDengueItemStateChanged
-
-    private void boxContactoCovidItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxContactoCovidItemStateChanged
-        setFact(Hechos.contactoCOVID, evt);
-    }//GEN-LAST:event_boxContactoCovidItemStateChanged
-
-    private void boxFiebreItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxFiebreItemStateChanged
-        setFact(Hechos.fiebre, evt);
-    }//GEN-LAST:event_boxFiebreItemStateChanged
-
-    private void boxFatigaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxFatigaItemStateChanged
-        setFact(Hechos.fatiga, evt);
-    }//GEN-LAST:event_boxFatigaItemStateChanged
-
-    private void boxDebilidadItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxDebilidadItemStateChanged
-        setFact(Hechos.debilidadGeneralziada, evt);
-    }//GEN-LAST:event_boxDebilidadItemStateChanged
-
-    private void boxEscalofriosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxEscalofriosItemStateChanged
-        setFact(Hechos.escalofrios, evt);
-    }//GEN-LAST:event_boxEscalofriosItemStateChanged
-
-    private void setFact(String hecho, ItemEvent event) {
-        if(event.getItem() instanceof  JCheckBox){
-            boolean selected = ((JCheckBox) event.getItem()).isSelected();
-
-            String cumple = (selected)? "si": "no";
-
-            _rie.addFact(hecho,cumple);
-        }
+        _rie.addFact(hecho,cumple);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
