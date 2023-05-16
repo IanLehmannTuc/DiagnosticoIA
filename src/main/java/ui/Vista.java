@@ -10,6 +10,8 @@ import java.awt.event.ItemEvent;
 import se.BaseDeConocimiento;
 import se.Hechos;
 
+import javax.swing.*;
+
 /**
  *
  * @author Ian Lehmann
@@ -654,9 +656,7 @@ public class Vista extends javax.swing.JFrame {
         }
         
         resultado_diagnostico.setText(diagnostico);
-        
-        _rie.clearFacts();
-        
+
         boxAbsominal.setSelected(false);
         boxArticular.setSelected(false);
         boxCabeza.setSelected(false);
@@ -683,6 +683,9 @@ public class Vista extends javax.swing.JFrame {
         boxTos.setSelected(false);
         boxVomitos.setSelected(false);
         boxZonaDengue.setSelected(false);
+
+        _rie.clearFacts();
+
     }//GEN-LAST:event_botDiagnosticarActionPerformed
 
     private void boxMuscularItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_boxMuscularItemStateChanged
@@ -789,12 +792,13 @@ public class Vista extends javax.swing.JFrame {
         setFact(Hechos.escalofrios, evt);
     }//GEN-LAST:event_boxEscalofriosItemStateChanged
 
-    private void setFact(String hecho, ItemEvent evt) {
-        Object item = evt.getItem();
+    private void setFact(String hecho, ItemEvent event) {
+        if(event.getItem() instanceof  JCheckBox){
+            boolean selected = ((JCheckBox) event.getItem()).isSelected();
 
-        if (evt.getStateChange() == ItemEvent.SELECTED) {
-            if (!"none".equals(item.toString().toLowerCase()))
-                this._rie.addFact(hecho, item.toString().toLowerCase());
+            String cumple = (selected)? "si": "no";
+
+            _rie.addFact(hecho,cumple);
         }
     }
 
